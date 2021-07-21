@@ -17,7 +17,7 @@ body{
   
 }
 .photoes{
-  /* background-color: green; */
+  
  
   display: flex;
   flex-wrap: wrap;
@@ -28,7 +28,7 @@ body{
 
 .App{
   text-align: center;
-  /* display: flex; */
+ 
 }
 
 .photo-item {
