@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Form from './component/Form';
+import Photos from './component/Photos';
 
-function App() {
+
+const App =() =>{
+
+  const [photos, setPhotos]=useState([])
+
+  const getAlbumId=(id)=>{
+    fetch(`https://jsonplaceholder.typicode.com/albums/${id}/photos`)
+    .then(response=>response.json())
+    .then(data=>{
+      setPhotos(data)
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3 style={{ color:'green'}}>PHOTO ALBUM</h3> 
+
+      <Form onSearch={getAlbumId}/><br/>
+
+      <Photos photos={photos}/>
     </div>
   );
 }
