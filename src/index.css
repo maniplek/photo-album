@@ -13,11 +13,28 @@ code {
 }
 body{
   background-color: lightblue;
+
+  
 }
-.photo-grid{
-  text-align: center;
+.photoes{
+  /* background-color: green; */
+ 
+  display: flex;
+  flex-wrap: wrap;
+
+  
+  
 }
+
 .App{
   text-align: center;
+  /* display: flex; */
 }
-*,body{box-sizing:border-box}
+
+.photo-item {
+  width: 50%;
+  margin-top: 10px;
+}
+.bt{
+  margin-left: 40px;
+}

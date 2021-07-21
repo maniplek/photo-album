@@ -1,6 +1,6 @@
 const Photo= ({photo}) => {
     return (
-        <div>
+        <div className="photo-item">
             <img src={photo.thumbnailUrl} alt=""/>
             <h3>{photo.title}</h3>
         </div>

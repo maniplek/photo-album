@@ -17,7 +17,7 @@ const App =() =>{
 
   return (
     <div className="App">
-      <h3 style={{ color:'green'}}>PHOTO ALBUM</h3> 
+      <h3  style={{ color:'green'}}className="title">PHOTO ALBUM</h3> 
 
       <Form onSearch={getAlbumId}/><br/>
 
